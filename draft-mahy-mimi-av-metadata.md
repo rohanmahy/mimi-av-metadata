@@ -9,25 +9,25 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+area: "Applications and Real-Time"
+workgroup: "More Instant Messaging Interoperability"
 keyword:
  - mimi content
  - image metadata
  - audio metadata
  - video metadata
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
+  group: "More Instant Messaging Interoperability"
+  type: "Working Group"
+  mail: "mimi@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/mimi/"
+  github: "rohanmahy/mimi-av-metadata"
+  latest: "https://rohanmahy.github.io/mimi-av-metadata/draft-mahy-mimi-av-metadata.html"
 
 author:
  -
     fullname: Rohan Mahy
-    organization:  
+    organization:
     email: rohan.mahy@gmail.com
 
 normative:
