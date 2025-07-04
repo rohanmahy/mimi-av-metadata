@@ -1,3 +1,4 @@
+---
 title: "Audio, Video, and Image Metadata extensions for the More Instant Messaging Interoperability (MIMI) Content format"
 abbrev: "MIMI Content AV Metadata"
 category: info
@@ -33,7 +34,7 @@ normative:
 
 informative:
 
-...
+
 
 --- abstract
 
