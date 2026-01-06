@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-04T02:00:26.063140+00:00",
+  "timestamp": "2026-01-06T01:51:12.945675+00:00",
   "repo": "rohanmahy/mimi-av-metadata",
   "labels": [
     {
@@ -49,6 +49,23 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOPGvYOM7hdOTH",
+      "title": "Adding Blurhashes",
+      "url": "https://github.com/rohanmahy/mimi-av-metadata/issues/1",
+      "state": "OPEN",
+      "author": "timokoesters",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Signal, Mastodon and other services use blurhashes to always have a preview for images. I think this is a strong reason to have them in MIMI as well.\n\nBlurhashes are an extremely low resolution blurry version of the image. It would be stored directly in the mimi content message, so the preview can be shown without any additional network requests.\n\nThe specification for blurhashes is relatively simple and can be summarized as these three steps:\n1. Apply a [DCT transform](https://en.wikipedia.org/wiki/Discrete_cosine_transform) to the image data (widely used, e. g. in JPEG, MP3, OPUS)\n2. Keep only the first few components\n3. Encode these components using a base 83 encoding\n\nMore details are here: https://github.com/DagAgren/BlurHash/blob/master/Algorithm.md\n\nPlease let me know what you think and what the process is to integrate blurhashes into the MIMI protocol. You mentioned before that a stable reference is needed for the definition. If there is none yet, I could write a formal document that matches the original implementation.",
+      "createdAt": "2026-01-05T18:51:26Z",
+      "updatedAt": "2026-01-05T18:51:26Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
   "pulls": []
 }
