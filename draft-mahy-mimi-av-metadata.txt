@@ -3,9 +3,9 @@
 
 
 More Instant Messaging Interoperability                          R. Mahy
-Internet-Draft                                               4 July 2025
+Internet-Draft                                              2 March 2026
 Intended status: Informational                                          
-Expires: 5 January 2026
+Expires: 3 September 2026
 
 
     Audio, Video, and Image Metadata extensions for the More Instant
@@ -51,11 +51,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 January 2026.
+   This Internet-Draft will expire on 3 September 2026.
 
 Copyright Notice
 
-   Copyright (c) 2025 IETF Trust and the persons identified as the
+   Copyright (c) 2026 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -222,9 +222,9 @@ Table of Contents
    [I-D.ietf-mimi-content]
               Mahy, R., "More Instant Messaging Interoperability (MIMI)
               message content", Work in Progress, Internet-Draft, draft-
-              ietf-mimi-content-06, 28 February 2025,
+              ietf-mimi-content-07, 7 July 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-mimi-
-              content-06>.
+              content-07>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
