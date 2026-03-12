@@ -3,9 +3,9 @@
 
 
 More Instant Messaging Interoperability                          R. Mahy
-Internet-Draft                                              2 March 2026
+Internet-Draft                                             12 March 2026
 Intended status: Informational                                          
-Expires: 3 September 2026
+Expires: 13 September 2026
 
 
     Audio, Video, and Image Metadata extensions for the More Instant
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 September 2026.
+   This Internet-Draft will expire on 13 September 2026.
 
 Copyright Notice
 
@@ -127,9 +127,8 @@ Table of Contents
 
    *  height: the height of the image or video in pixels
 
-   *  duration: the duration of the audio or video in seconds.  It can
-      be expressed as an unsigned integer or a positive floating point
-      number
+   *  duration: the duration of the audio or video in milliseconds,
+      expressed as an unsigned integer
 
    *  preview_index: for a video part, the partIndex of another related
       part that represents its image preview.  It can refer to a
@@ -165,14 +164,13 @@ Table of Contents
        &(type: 2)       : audio / image / video / $ext_media,
        ? &(width: 3)              : uint,
        ? &(height: 4)             : uint,
-       ? &(duration: 5)           : nonnegative_number,
+       ? &(duration: 5)           : uint,
        ? &(preview_index: 6)      : uint16,
        ? &(accessibility_text: 7) : tstr,
        ? &(rotation: 8)           : 0 / 90 / 180 / 270
        $ext_av_metadata
    }
 
-   nonnegative_number = uint / float .gt 0.0
    uint16 = uint .size 2
 
    audio = 1
@@ -190,7 +188,7 @@ Table of Contents
         /type      /         2: 3, /video/
         /width     /         3: 1920,
         /height    /         4: 1080,
-        /duration  /         5: 37, / in seconds. can be uint or float /
+        /duration  /         5: 37000, / in milliseconds /
         /preview_index /     6: 4,
         /accessibility_text/ 7: "two golden retriever puppies playing in" +
                                 "overgrown grass lit with low sunlight"
@@ -204,7 +202,7 @@ Table of Contents
      {
         /partIndex /         1: 7,
         /type      /         2: 1, /audio/
-        /duration  /         5: 9.45, / in seconds. can be uint or float /
+        /duration  /         5: 9450, / in milliseconds /
         /accessibility_text/ 7: "uproarious laughter"
      }
    ]
@@ -222,9 +220,9 @@ Table of Contents
    [I-D.ietf-mimi-content]
               Mahy, R., "More Instant Messaging Interoperability (MIMI)
               message content", Work in Progress, Internet-Draft, draft-
-              ietf-mimi-content-07, 7 July 2025,
+              ietf-mimi-content-08, 2 March 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-mimi-
-              content-07>.
+              content-08>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
