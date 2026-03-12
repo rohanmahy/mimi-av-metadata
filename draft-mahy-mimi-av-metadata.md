@@ -68,7 +68,7 @@ Each AV metadata entry is a CBOR map of AV metadata properties, all of which are
 - `type`: an integer enumeration representing the media type (not-including the subtype). audio is 1, image is 2, and video is 3. An extension socket is defined, although its need is not anticipated.
 - `width`: the width of the image or video in pixels
 - `height`: the height of the image or video in pixels
-- `duration`: the duration of the audio or video in seconds. It can be expressed as an unsigned integer or a positive floating point number
+- `duration`: the duration of the audio or video in milliseconds, expressed as an unsigned integer
 - `preview_index`: for a video part, the `partIndex` of another related part that represents its image preview. It can refer to a `SinglePart` or `ExternalPart`, or a `MultiPart` with `chooseOne` `partSemantics` which contains only `SinglePart` or `ExternalPart` types, all of which must be an image with a disposition value of `preview`.
 - `accessibility_text`: this text could be rendered instead of the audio, image, or video when various accessiblity settings are enabled, or during no or slow network access when a cached or preview image is not available.
 - `rotation`: one of four values: 0, 90, 180, or 270. This integer refers to the number of degrees of clockwise rotation (in 90 degree increments) needed to correctly view the image.
@@ -87,14 +87,13 @@ metadata_entry = {
     &(type: 2)       : audio / image / video / $ext_media,
     ? &(width: 3)              : uint,
     ? &(height: 4)             : uint,
-    ? &(duration: 5)           : nonnegative_number,
+    ? &(duration: 5)           : uint,
     ? &(preview_index: 6)      : uint16,
     ? &(accessibility_text: 7) : tstr,
     ? &(rotation: 8)           : 0 / 90 / 180 / 270
     $ext_av_metadata
 }
 
-nonnegative_number = uint / float .gt 0.0
 uint16 = uint .size 2
 
 audio = 1
@@ -113,7 +112,7 @@ Below is an example of a video of puppies, a preview image, and an audio clip.
      /type      /         2: 3, /video/
      /width     /         3: 1920,
      /height    /         4: 1080,
-     /duration  /         5: 37, / in seconds. can be uint or float /
+     /duration  /         5: 37000, / in milliseconds /
      /preview_index /     6: 4,
      /accessibility_text/ 7: "two golden retriever puppies playing in" +
                              "overgrown grass lit with low sunlight"
@@ -127,7 +126,7 @@ Below is an example of a video of puppies, a preview image, and an audio clip.
   {
      /partIndex /         1: 7,
      /type      /         2: 1, /audio/
-     /duration  /         5: 9.45, / in seconds. can be uint or float /
+     /duration  /         5: 9450, / in milliseconds /
      /accessibility_text/ 7: "uproarious laughter"
   }
 ]
