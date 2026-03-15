@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-12T02:20:49.483495+00:00",
+  "timestamp": "2026-03-15T02:34:23.872186+00:00",
   "repo": "rohanmahy/mimi-av-metadata",
   "labels": [
     {
@@ -65,7 +65,68 @@
       "updatedAt": "2026-01-05T18:51:26Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOPGvYOM7yK_bi",
+      "title": "Make duration a useful integer",
+      "url": "https://github.com/rohanmahy/mimi-av-metadata/issues/3",
+      "state": "CLOSED",
+      "author": "rohanmahy",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Feedback from an implementor:\n- Since this is a UI hint, we don't need to me more precise than milliseconds.\n- Dealing with floats is a pain.\n- Integer seconds don't really make sense.\n\nNoted: u64 number of milliseconds maxes out at 584 million years. That's probably long enough ;-)\n\nConclusion: Convert to an unsigned integer number of milliseconds",
+      "createdAt": "2026-03-12T08:14:29Z",
+      "updatedAt": "2026-03-12T08:50:10Z",
+      "closedAt": "2026-03-12T08:50:09Z",
+      "comments": [
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "OWNER",
+          "body": "Addressed in #2. closing",
+          "createdAt": "2026-03-12T08:50:10Z",
+          "updatedAt": "2026-03-12T08:50:10Z"
+        }
+      ]
     }
   ],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 2,
+      "id": "PR_kwDOPGvYOM7J8sEw",
+      "title": "make duration an integer number of milliseconds",
+      "url": "https://github.com/rohanmahy/mimi-av-metadata/pull/2",
+      "state": "MERGED",
+      "author": "rohanmahy",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "having floats in this format is a pain and have an integer number of seconds is useless. Convert to an unsigned integer number of milliseconds instead.",
+      "createdAt": "2026-03-12T08:10:32Z",
+      "updatedAt": "2026-03-12T08:49:45Z",
+      "baseRepository": "rohanmahy/mimi-av-metadata",
+      "baseRefName": "main",
+      "baseRefOid": "f970778dc064730ea5bacc527b65ddad0b2f7ec5",
+      "headRepository": "rohanmahy/mimi-av-metadata",
+      "headRefName": "int-duration",
+      "headRefOid": "114bac2e90b77bbd658cae6cd3ab3314a8e4db96",
+      "closedAt": "2026-03-12T08:49:42Z",
+      "mergedAt": "2026-03-12T08:49:41Z",
+      "mergedBy": "rohanmahy",
+      "mergeCommit": {
+        "oid": "83e8f31884bca80d6429c24af1ac5f8bf650ccf7"
+      },
+      "comments": [
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "OWNER",
+          "body": "Addresses #3",
+          "createdAt": "2026-03-12T08:49:45Z",
+          "updatedAt": "2026-03-12T08:49:45Z"
+        }
+      ],
+      "reviews": []
+    }
+  ]
 }
