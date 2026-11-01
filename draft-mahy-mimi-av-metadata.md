@@ -59,7 +59,7 @@ This document defines extensions to the MIMI content format to provide these hin
 
 This document uses a variety of terms from the MIMI content format definition, especially `NestedPart`, `SinglePart`, `ExternalPart`, and `MultiPart`.
 
-# AV Metadata Extensions
+# AV Metadata Extensions {#mechanism}
 
 The AV Metadata MIMI content extension is an array of AV metadata entries.
 Each AV metadata entry is a CBOR map of AV metadata properties, all of which are optional except the `part_index` and `type`. The semantics of the individual property fields is as follows:
@@ -140,8 +140,17 @@ TODO Security
 
 # IANA Considerations
 
-TODO register the extension with IANA.
+IANA is requested to add the following entries to the MIMI Content Extension Keys registry.
 
+## av-metadata MIMI Content Extension Key
+
+The following completed registration template is provided:
+
+- Key: TBD1 (suggested value 6)
+- Name: av-metadata
+- Type: array
+- Recommended: Y
+- Reference: {{mechanism}} of this document
 
 --- back
 
