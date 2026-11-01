@@ -3,9 +3,9 @@
 
 
 More Instant Messaging Interoperability                          R. Mahy
-Internet-Draft                                             12 March 2026
+Internet-Draft                                           1 November 2026
 Intended status: Informational                                          
-Expires: 13 September 2026
+Expires: 5 May 2027
 
 
     Audio, Video, and Image Metadata extensions for the More Instant
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 September 2026.
+   This Internet-Draft will expire on 5 May 2027.
 
 Copyright Notice
 
@@ -75,6 +75,7 @@ Table of Contents
    4.  Example
    5.  Security Considerations
    6.  IANA Considerations
+     6.1.  av-metadata MIMI Content Extension Key
    7.  Normative References
    Acknowledgments
    Author's Address
@@ -213,16 +214,31 @@ Table of Contents
 
 6.  IANA Considerations
 
-   TODO register the extension with IANA.
+   IANA is requested to add the following entries to the MIMI Content
+   Extension Keys registry.
+
+6.1.  av-metadata MIMI Content Extension Key
+
+   The following completed registration template is provided:
+
+   *  Key: TBD1 (suggested value 6)
+
+   *  Name: av-metadata
+
+   *  Type: array
+
+   *  Recommended: Y
+
+   *  Reference: Section 3 of this document
 
 7.  Normative References
 
    [I-D.ietf-mimi-content]
               Mahy, R., "More Instant Messaging Interoperability (MIMI)
               message content", Work in Progress, Internet-Draft, draft-
-              ietf-mimi-content-08, 2 March 2026,
+              ietf-mimi-content-09, 4 July 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-mimi-
-              content-08>.
+              content-09>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
